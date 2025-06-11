@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luís Fialho | Projetista Fotovoltaico & Especialista 3D</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Define a fonte Inter como padrão e um fundo mais sofisticado */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; 
+        }
+
+        /* Efeito de "lift" e sombra nos cartões ao passar o rato */
+        .interactive-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        /* Estilos para a barra de navegação fixa */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Animação de fade-in para elementos ao fazer scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Estilo para os botões de competências clicáveis */
+        .skill-button {
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Barra de Navegação -->
+    <nav class="sticky-nav">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-bold text-xl text-gray-800">Luís Fialho</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
+                        <a href="#experience" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium">Experiência</a>
+                        <a href="#skills" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium">Competências</a>
+                        <a href="#education" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium">Educação</a>
+                        <a href="#languages" class="text-gray-600 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium">Idiomas</a>
+                        <a href="#contact" class="bg-cyan-500 text-white hover:bg-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Secção do Cabeçalho -->
+        <header class="text-center py-16">
+            <!-- FOTO DE PERFIL CORRIGIDA -->
+            <img class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-lg" src="https://i.ibb.co/VvzJB8v/Foto-de-Perfil.png" alt="Fotografia de Luís Fialho">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">Luís Pedro Coreixo Fialho</h1>
+            <h2 class="text-xl md:text-2xl font-medium text-cyan-600 mt-2">
+                Projetista Fotovoltaico | Especialista em Modelação 3D e Automação
+            </h2>
+        </header>
+
+        <!-- Corpo Principal -->
+        <main class="space-y-12">
+            
+            <!-- Secção Sobre Mim -->
+            <section id="about" class="fade-in-section bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                    Sobre Mim
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Engenheiro Eletrotécnico com Mestrado e mais de 4 anos de experiência em ambientes industriais e de energias renováveis. Sólida especialização no ciclo completo de projetos solares fotovoltaicos, desde a conceção e custeio até à modelação 3D e implementação. Experiência comprovada em automação, desenho CAD e otimização de processos em empresas de referência como a PowerYield e a Volkswagen Autoeuropa. Proativo e com grande capacidade de aprendizagem, procuro novos desafios onde possa aplicar as minhas competências técnicas para desenvolver soluções inovadoras e eficientes.
+                </p>
+            </section>
+
+            <!-- Secção de Experiência -->
+            <section id="experience" class="fade-in-section">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                     <svg class="w-8 h-8 mr-3 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.07a2.25 2.25 0 01-2.25 2.25h-13.5a2.25 2.25 0 01-2.25-2.25v-4.07m16.5 0a2.25 2.25 0 00-2.25-2.25h-13.5a2.25 2.25 0 00-2.25 2.25m16.5 0v-4.07a2.25 2.25 0 00-2.25-2.25h-13.5a2.25 2.25 0 00-2.25 2.25v4.07" /></svg>
+                    Experiência Profissional
+                </h3>
+                <div class="space-y-8">
+                    <!-- Cards de Experiência -->
+                    <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                        <h4 class="text-xl font-bold">Projetista Solar Fotovoltaico</h4>
+                        <p class="text-md font-semibold text-cyan-700">
+                            <a href="https://www.poweryield.pt/" target="_blank" class="hover:underline">PowerYield</a>
+                        </p>
+                        <p class="text-sm text-gray-500">Montemor-o-Novo, Portugal | Abril 2022 - Presente</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600">
+                            <li>Gestão integral de projetos fotovoltaicos, liderando custeio, propostas, levantamentos e preparação de obra.</li>
+                            <li>Utilização de drones para levantamentos aéreos e fotogrametria.</li>
+                            <li>Desenvolvimento de modelos 2D e 3D detalhados para análise e simulação.</li>
+                            <li>Gestão da infraestrutura de redes e parque informático.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                        <h4 class="text-xl font-bold">Estágio em Modelação e Impressão 3D</h4>
+                        <p class="text-md font-semibold text-cyan-700">
+                             <a href="https://www.volkswagenautoeuropa.pt/" target="_blank" class="hover:underline">Volkswagen Autoeuropa</a>
+                        </p>
+                        <p class="text-sm text-gray-500">Palmela, Portugal | Novembro 2020 - Abril 2022</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600">
+                            <li>Desenho e modelação de componentes e moldes de precisão em CATIA V5.</li>
+                            <li>Gestão do fluxo de trabalho de impressão 3D, da preparação à validação.</li>
+                            <li>Liderança no desenvolvimento de um dispositivo móvel para transporte de bases de medição.</li>
+                            <li>Administração de bases de dados em IBM Maximo e apoio em projetos de Realidade Virtual.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                        <h4 class="text-xl font-bold">Estágio em Programação e Eletrónica</h4>
+                        <p class="text-md font-semibold text-cyan-700">
+                            <a href="https://www.te.com/" target="_blank" class="hover:underline">TE Connectivity</a>
+                        </p>
+                        <p class="text-sm text-gray-500">Évora, Portugal | Novembro 2015 - Fevereiro 2016</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600">
+                            <li>Desenvolvimento de aplicação em LabView para visualização de dados de autómatos em tempo real.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Secção Competências -->
+            <section id="skills" class="fade-in-section bg-white p-8 rounded-xl shadow-md">
+                 <h3 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.553L16.5 21.75l-.398-1.197a3.375 3.375 0 00-2.455-2.456L12.75 18l1.197-.398a3.375 3.375 0 002.455-2.456L16.5 14.25l.398 1.197a3.375 3.375 0 002.456 2.456L20.25 18l-1.197.398a3.375 3.375 0 00-2.456 2.456z" /></svg>
+                    Competências Digitais
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    <!-- Categorias de Competências -->
+                     <div>
+                        <h4 class="font-bold text-lg text-gray-700 mb-3">Engenharia e Design</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://pvsol.software/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">PVSol</a>
+                            <a href="https://www.pvsyst.com/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">PVSyst</a>
+                            <a href="https://www.autodesk.com/autocad" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">AutoCAD</a>
+                            <a href="https://www.autodesk.com/products/recap/overview" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Recap Pro</a>
+                            <a href="https://www.3ds.com/products-services/catia/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">CATIA V5</a>
+                            <a href="https://www.autodesk.com/products/fusion-360/overview" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Fusion 360</a>
+                            <a href="https://www.solidworks.com/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">SolidWorks</a>
+                            <a href="https://www.sketchup.com/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Sketchup</a>
+                            <a href="https://www.opendronemap.org/webodm/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Web ODM</a>
+                            <a href="https://enterprise.dji.com/dji-terra" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">DJI Terra</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-700 mb-3">Programação e Automação</h4>
+                        <div class="flex flex-wrap gap-2">
+                             <a href="https://www.ni.com/pt/shop/labview.html" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 text-sm font-medium px-3 py-1 rounded-full">LabView</a>
+                             <a href="https://www.primaverabss.com/pt/software-gestao-sirius/" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 text-sm font-medium px-3 py-1 rounded-full">My Sirius</a>
+                             <a href="https://learn.microsoft.com/en-us/office/vba/api/overview/excel" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 text-sm font-medium px-3 py-1 rounded-full">VBA</a>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Programação de Autómatos</span>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Criação de Scripts</span>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Automatização Informática</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-700 mb-3">Software e Produtividade</h4>
+                        <div class="flex flex-wrap gap-2">
+                             <a href="https://www.microsoft.com/pt-pt/microsoft-365/excel" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Microsoft Excel</a>
+                             <a href="https://www.microsoft.com/pt-pt/microsoft-365/word" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Microsoft Word</a>
+                             <a href="https://www.microsoft.com/pt-pt/microsoft-teams/group-chat-software" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Microsoft Teams</a>
+                             <a href="https://www.ibm.com/products/maximo" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">IBM MAXIMO</a>
+                             <a href="https://ultimaker.com/software/ultimaker-cura" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 text-sm font-medium px-3 py-1 rounded-full">Cura</a>
+                             <span class="bg-cyan-100 text-cyan-800 text-sm font-medium px-3 py-1 rounded-full">Gmail</span>
+                        </div>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-lg text-gray-700 mb-3">Tecnologias, Média e Outros</h4>
+                        <div class="flex flex-wrap gap-2">
+                             <a href="https://aistudio.google.com/" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 text-sm font-medium px-3 py-1 rounded-full">Google AI Studio</a>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">LLMs</span>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Criptomoedas</span>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Realidade Virtual</span>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Edição de Vídeo</span>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Edição de Imagem</span>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Sistemas de Segurança Informática</span>
+                             <a href="https://store.steampowered.com/" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 text-sm font-medium px-3 py-1 rounded-full">Steam</a>
+                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Veículos R/C</span>
+                        </div>
+                    </div>
+                </div>
+                 <p class="text-center text-gray-600 mt-8 italic">...e uma grande facilidade e gosto em aprender novos softwares e tecnologias!</p>
+            </section>
+            
+            <!-- Secção Educação e Formação -->
+             <section id="education" class="fade-in-section">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-.07.042m15.482 0l.07.042m-15.552 0a46.176 46.176 0 01-2.202.665M6.3 18a45.926 45.926 0 01-2.202.665m15.9 0a45.926 45.926 0 00-2.202-.665M21 18a45.926 45.926 0 00-2.202-.665" /></svg>
+                    Educação e Formação
+                </h3>
+                 <div class="space-y-8">
+                     <!-- Educação -->
+                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                        <a href="http://portal2.ipt.pt/pt/cursos/Mestrados/MEE/" target="_blank" class="block hover:text-cyan-700">
+                            <h4 class="text-lg font-bold">Mestrado em Engenharia Eletrotécnica - Especialização em Controlo e Eletrónica Industrial</h4>
+                            <p class="text-md text-gray-700">Instituto Politécnico de Tomar</p>
+                            <p class="text-sm text-gray-500">2019 - 2021 | Nota Final: 17/20</p>
+                        </a>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                         <a href="http://portal2.ipt.pt/pt/cursos/Licenciaturas/L-EEC/" target="_blank" class="block hover:text-cyan-700">
+                            <h4 class="text-lg font-bold">Licenciatura em Engenharia Eletrotécnica e de Computadores</h4>
+                            <p class="text-md text-gray-700">Instituto Politécnico de Tomar</p>
+                            <p class="text-sm text-gray-500">2016 - 2019 | Nota Final: 15/20</p>
+                        </a>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                        <a href="http://portal2.ipt.pt/pt/cursos/cets/cet-arci/" target="_blank" class="block hover:text-cyan-700">
+                            <h4 class="text-lg font-bold">CET - Automação, Robótica e Controlo Industrial</h4>
+                            <p class="text-md text-gray-700">Instituto Politécnico de Tomar</p>
+                            <p class="text-sm text-gray-500">2014 - 2016</p>
+                        </a>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                         <a href="http://www.aevn.pt/" target="_blank" class="block hover:text-cyan-700">
+                            <h4 class="text-lg font-bold">12º Ano em Ciências e Tecnologias</h4>
+                            <p class="text-md text-gray-700">Agrupamento de Escolas de Vendas Novas</p>
+                            <p class="text-sm text-gray-500">Concluído em 2014</p>
+                        </a>
+                    </div>
+                    <!-- Formações Adicionais -->
+                    <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
+                        <h4 class="text-lg font-bold">Formações Adicionais</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600">
+                           <li>Procedimentos de Contratação Pública (40h)</li>
+                           <li>Microsoft Excel - Nível Avançado (50h)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Secção Idiomas -->
+            <section id="languages" class="fade-in-section bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                    Idiomas
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-800">Português</h4>
+                        <p class="text-cyan-600 font-semibold">Nativo</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-800">Inglês</h4>
+                        <p class="text-cyan-600 font-semibold">Avançado / Proficiente (C1/C2)</p>
+                         <div class="text-sm text-gray-600 mt-1">
+                            <p>Compreensão: C1/C2</p>
+                            <p>Expressão Oral: B2</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-800">Espanhol</h4>
+                        <p class="text-cyan-600 font-semibold">Intermédio (B1/B2)</p>
+                        <div class="text-sm text-gray-600 mt-1">
+                            <p>Compreensão: B1/B2</p>
+                            <p>Expressão Oral: A2</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secção Contacto -->
+            <section id="contact" class="fade-in-section text-center py-16 bg-gray-800 text-white rounded-xl">
+                <h3 class="text-3xl font-bold mb-4">Interessado em contactar?</h3>
+                <p class="text-gray-300 mb-6">Pode encontrar-me no LinkedIn, descarregar o meu CV ou enviar um email para:</p>
+                <p class="text-2xl font-semibold text-white mb-8 hover:text-cyan-400 transition-colors">luispcfialho@gmail.com</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.linkedin.com/in/luispcfialho/" target="_blank" class="inline-block bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                        LinkedIn
+                    </a>
+                    <a href="https://drive.google.com/file/d/1t7l_rnWtH6b0dEhDX4wJlIpbV80LAm4l/view?usp=sharing" target="_blank" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                        Download CV
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>&copy; 2025 Luís Pedro Coreixo Fialho. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Lógica para adicionar a classe 'is-visible' quando a secção entra no ecrã
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // A animação começa quando 10% do elemento está visível
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
