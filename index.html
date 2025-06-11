@@ -6,7 +6,7 @@
     <title>Luís Fialho | Projetista Fotovoltaico & Modelador 3D</title>
     
     <!-- FAVICON (LOGOTIPO DO SEPARADOR) - VERSÃO SIMPLIFICADA E FIÁVEL -->
-    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/FulnMCF.png">
+    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/bl2MXsB.jpeg">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -99,16 +99,33 @@
                 <div class="flex items-center">
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-center space-x-4">
-                            <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
-                            <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium">Experiência</a>
-                            <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium">Competências</a>
-                            <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium">Educação</a>
-                            <a href="#languages" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium">Idiomas</a>
-                            <a href="#contact" class="bg-cyan-500 text-white hover:bg-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contacto</a>
+                            <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium" data-translate="nav_about">Sobre</a>
+                            <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium" data-translate="nav_experience">Experiência</a>
+                            <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium" data-translate="nav_skills">Competências</a>
+                            <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium" data-translate="nav_education">Educação</a>
+                            <a href="#languages" class="text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium" data-translate="nav_languages">Idiomas</a>
+                            <a href="#contact" class="bg-cyan-500 text-white hover:bg-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-translate="nav_contact">Contacto</a>
+                        </div>
+                    </div>
+                     <!-- Language Switcher -->
+                    <div class="relative ml-4">
+                        <button id="language-toggle" class="flex items-center justify-center w-10 h-10 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+                            <span id="current-lang-emoji" class="text-2xl">🇵🇹</span>
+                        </button>
+                        <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1">
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" data-lang="pt">
+                                <span class="text-2xl mr-2">🇵🇹</span> Português
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" data-lang="en">
+                                <span class="text-2xl mr-2">🇬🇧</span> English
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" data-lang="fr">
+                                <span class="text-2xl mr-2">🇫🇷</span> Français
+                            </a>
                         </div>
                     </div>
                      <!-- Dark Mode Toggle Button -->
-                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-4">
+                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-2">
                         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 12.122a1 1 0 011.414 0l.707-.707a1 1 0 11-1.414-1.414l-.707.707a1 1 0 010 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                     </button>
@@ -124,8 +141,8 @@
         <header class="text-center py-16">
             <img class="w-60 h-60 rounded-full mx-auto mb-4 border-4 border-white dark:border-gray-700 shadow-lg object-cover" src="https://i.imgur.com/bl2MXsB.jpeg" alt="Fotografia de Luís Fialho">
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">Luís Pedro Coreixo Fialho</h1>
-            <h2 class="text-xl md:text-2xl font-medium text-cyan-600 dark:text-cyan-400 mt-2">
-                Projetista Fotovoltaico | Especialista em Modelação 3D e Automação
+            <h2 class="text-xl md:text-2xl font-medium text-cyan-600 dark:text-cyan-400 mt-2" data-translate="header_subtitle">
+                Projetista Fotovoltaico | Especialista em Modelação 3D
             </h2>
         </header>
 
@@ -136,9 +153,9 @@
             <section id="about" class="fade-in-section bg-white p-8 rounded-xl shadow-md">
                 <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                     <svg class="w-8 h-8 mr-3 text-cyan-500 dark:text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
-                    Sobre Mim
+                    <span data-translate="about_title">Sobre Mim</span>
                 </h3>
-                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify-custom">
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify-custom" data-translate="about_text">
                     Engenheiro Eletrotécnico com Mestrado e mais de 4 anos de experiência em ambientes industriais e de energias renováveis. Sólida especialização no ciclo completo de projetos solares fotovoltaicos, desde a conceção e custeio até à modelação 3D e implementação. Experiência comprovada em automação, desenho CAD e otimização de processos em empresas de referência como a PowerYield e a Volkswagen Autoeuropa. Proativo e com grande capacidade de aprendizagem, procuro novos desafios onde possa aplicar as minhas competências técnicas para desenvolver soluções inovadoras e eficientes.
                 </p>
             </section>
@@ -147,44 +164,37 @@
             <section id="experience" class="fade-in-section">
                 <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                      <svg class="w-8 h-8 mr-3 text-cyan-500 dark:text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.07a2.25 2.25 0 01-2.25 2.25h-13.5a2.25 2.25 0 01-2.25-2.25v-4.07m16.5 0a2.25 2.25 0 00-2.25-2.25h-13.5a2.25 2.25 0 00-2.25 2.25m16.5 0v-4.07a2.25 2.25 0 00-2.25-2.25h-13.5a2.25 2.25 0 00-2.25 2.25v4.07" /></svg>
-                    Experiência Profissional
+                    <span data-translate="experience_title">Experiência Profissional</span>
                 </h3>
                 <div class="space-y-8">
-                    <!-- Cards de Experiência -->
                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
-                        <h4 class="text-xl font-bold dark:text-white">Projetista Solar Fotovoltaico</h4>
-                        <p class="text-md font-semibold text-cyan-700 dark:text-cyan-500">
-                            <a href="https://www.poweryield.pt/" target="_blank" class="hover:underline">PowerYield</a>
-                        </p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Montemor-o-Novo, Portugal | Abril 2022 - Presente</p>
+                        <h4 class="text-xl font-bold dark:text-white" data-translate="job1_title">Projetista Solar Fotovoltaico</h4>
+                        <p class="text-md font-semibold text-cyan-700 dark:text-cyan-500"><a href="https://www.poweryield.pt/" target="_blank" class="hover:underline">PowerYield</a></p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Montemor-o-Novo, Portugal | <span data-translate="job1_date">Abril 2022 - Presente</span></p>
                         <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 dark:text-gray-400">
-                            <li>Gestão integral de projetos fotovoltaicos, liderando custeio, propostas, levantamentos e preparação de obra.</li>
-                            <li>Utilização de drones para levantamentos aéreos e fotogrametria.</li>
-                            <li>Desenvolvimento de modelos 2D e 3D detalhados para análise e simulação.</li>
-                            <li>Gestão da infraestrutura de redes e parque informático.</li>
+                            <li data-translate="job1_desc1">Gestão integral de projetos fotovoltaicos, liderando custeio, propostas, levantamentos e preparação de obra.</li>
+                            <li data-translate="job1_desc2">Utilização de drones para levantamentos aéreos e fotogrametria.</li>
+                            <li data-translate="job1_desc3">Desenvolvimento de modelos 2D e 3D detalhados para análise e simulação.</li>
+                            <li data-translate="job1_desc4">Gestão da infraestrutura de redes e parque informático.</li>
                         </ul>
                     </div>
                      <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
-                        <h4 class="text-xl font-bold dark:text-white">Estágio em Modelação e Impressão 3D</h4>
-                        <p class="text-md font-semibold text-cyan-700 dark:text-cyan-500">
-                             <a href="https://www.vwautoeuropa.pt/" target="_blank" class="hover:underline">Volkswagen Autoeuropa</a>
-                        </p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Palmela, Portugal | Novembro 2020 - Abril 2022</p>
+                        <h4 class="text-xl font-bold dark:text-white" data-translate="job2_title">Estágio em Modelação e Impressão 3D</h4>
+                        <p class="text-md font-semibold text-cyan-700 dark:text-cyan-500"><a href="https://www.vwautoeuropa.pt/" target="_blank" class="hover:underline">Volkswagen Autoeuropa</a></p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400" data-translate="job2_date">Palmela, Portugal | Novembro 2020 - Abril 2022</p>
                         <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 dark:text-gray-400">
-                            <li>Desenho e modelação de componentes e moldes de precisão em CATIA V5.</li>
-                            <li>Gestão do fluxo de trabalho de impressão 3D, da preparação à validação.</li>
-                            <li>Liderança no desenvolvimento de um dispositivo móvel para transporte de bases de medição.</li>
-                            <li>Administração de bases de dados em IBM Maximo e apoio em projetos de Realidade Virtual.</li>
+                            <li data-translate="job2_desc1">Desenho e modelação de componentes e moldes de precisão em CATIA V5.</li>
+                            <li data-translate="job2_desc2">Gestão do fluxo de trabalho de impressão 3D, da preparação à validação.</li>
+                            <li data-translate="job2_desc3">Liderança no desenvolvimento de um dispositivo móvel para transporte de bases de medição.</li>
+                            <li data-translate="job2_desc4">Administração de bases de dados em IBM Maximo e apoio em projetos de Realidade Virtual.</li>
                         </ul>
                     </div>
                      <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
-                        <h4 class="text-xl font-bold dark:text-white">Estágio em Programação e Eletrónica</h4>
-                        <p class="text-md font-semibold text-cyan-700 dark:text-cyan-500">
-                            <a href="https://www.te.com/" target="_blank" class="hover:underline">TE Connectivity</a>
-                        </p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Évora, Portugal | Novembro 2015 - Fevereiro 2016</p>
+                        <h4 class="text-xl font-bold dark:text-white" data-translate="job3_title">Estágio em Programação e Eletrónica</h4>
+                        <p class="text-md font-semibold text-cyan-700 dark:text-cyan-500"><a href="https://www.te.com/" target="_blank" class="hover:underline">TE Connectivity</a></p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400" data-translate="job3_date">Évora, Portugal | Novembro 2015 - Fevereiro 2016</p>
                         <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 dark:text-gray-400">
-                            <li>Desenvolvimento de aplicação em LabView para visualização de dados de autómatos em tempo real.</li>
+                            <li data-translate="job3_desc1">Desenvolvimento de aplicação em LabView para visualização de dados de autómatos em tempo real.</li>
                         </ul>
                     </div>
                 </div>
@@ -194,12 +204,11 @@
             <section id="skills" class="fade-in-section bg-white p-8 rounded-xl shadow-md">
                  <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                     <svg class="w-8 h-8 mr-3 text-cyan-500 dark:text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.553L16.5 21.75l-.398-1.197a3.375 3.375 0 00-2.455-2.456L12.75 18l1.197-.398a3.375 3.375 0 002.455-2.456L16.5 14.25l.398 1.197a3.375 3.375 0 002.456 2.456L20.25 18l-1.197.398a3.375 3.375 0 00-2.456 2.456z" /></svg>
-                    Competências Digitais
+                    <span data-translate="skills_title">Competências Digitais</span>
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                    <!-- Categorias de Competências -->
                      <div>
-                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3">Engenharia e Design</h4>
+                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3" data-translate="skills_cat1">Engenharia e Design</h4>
                         <div class="flex flex-wrap gap-2">
                             <a href="https://pvsol.software/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 dark:bg-cyan-900 dark:text-cyan-200 dark:hover:bg-cyan-800 text-sm font-medium px-3 py-1 rounded-full">PVSol</a>
                             <a href="https://www.pvsyst.com/" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 dark:bg-cyan-900 dark:text-cyan-200 dark:hover:bg-cyan-800 text-sm font-medium px-3 py-1 rounded-full">PVSyst</a>
@@ -214,18 +223,18 @@
                         </div>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3">Programação e Automação</h4>
+                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3" data-translate="skills_cat2">Programação e Automação</h4>
                         <div class="flex flex-wrap gap-2">
                              <a href="https://www.ni.com/pt/shop/labview.html" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 text-sm font-medium px-3 py-1 rounded-full">LabView</a>
                              <a href="https://www.primaverabss.com/pt/software-gestao-sirius/" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 text-sm font-medium px-3 py-1 rounded-full">My Sirius</a>
                              <a href="https://learn.microsoft.com/en-us/office/vba/api/overview/excel" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 text-sm font-medium px-3 py-1 rounded-full">VBA</a>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Programação de Autómatos</span>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Criação de Scripts</span>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Automatização Informática</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_plc">Programação de Autómatos</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_scripting">Criação de Scripts</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_automation">Automatização Informática</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3">Software e Produtividade</h4>
+                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3" data-translate="skills_cat3">Software e Produtividade</h4>
                         <div class="flex flex-wrap gap-2">
                              <a href="https://www.microsoft.com/pt-pt/microsoft-365/excel" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 dark:bg-cyan-900 dark:text-cyan-200 dark:hover:bg-cyan-800 text-sm font-medium px-3 py-1 rounded-full">Microsoft Excel</a>
                              <a href="https://www.microsoft.com/pt-pt/microsoft-365/word" target="_blank" class="skill-button bg-cyan-100 text-cyan-800 hover:bg-cyan-200 dark:bg-cyan-900 dark:text-cyan-200 dark:hover:bg-cyan-800 text-sm font-medium px-3 py-1 rounded-full">Microsoft Word</a>
@@ -236,65 +245,62 @@
                         </div>
                     </div>
                      <div>
-                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3">Tecnologias, Média e Outros</h4>
+                        <h4 class="font-bold text-lg text-gray-700 dark:text-gray-300 mb-3" data-translate="skills_cat4">Tecnologias, Média e Outros</h4>
                         <div class="flex flex-wrap gap-2">
                              <a href="https://aistudio.google.com/" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 text-sm font-medium px-3 py-1 rounded-full">Google AI Studio</a>
                              <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">LLMs</span>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Criptomoedas</span>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Realidade Virtual</span>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Edição de Vídeo</span>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Edição de Imagem</span>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Sistemas de Segurança Informática</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_crypto">Criptomoedas</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_vr">Realidade Virtual</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_video">Edição de Vídeo</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_image">Edição de Imagem</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_security">Sistemas de Segurança Informática</span>
                              <a href="https://store.steampowered.com/" target="_blank" class="skill-button bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 text-sm font-medium px-3 py-1 rounded-full">Steam</a>
-                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">Veículos R/C</span>
+                             <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full" data-translate="skill_rc">Veículos R/C</span>
                         </div>
                     </div>
                 </div>
-                 <p class="text-center text-gray-600 dark:text-gray-400 mt-8 italic">...e uma grande facilidade e gosto em aprender novos softwares e tecnologias!</p>
+                 <p class="text-center text-gray-600 dark:text-gray-400 mt-8 italic" data-translate="skills_footer">...e uma grande facilidade e gosto em aprender novos softwares e tecnologias!</p>
             </section>
             
-            <!-- Secção Educação e Formação -->
-             <section id="education" class="fade-in-section">
+            <section id="education" class="fade-in-section">
                 <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                     <svg class="w-8 h-8 mr-3 text-cyan-500 dark:text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-.07.042m15.482 0l.07.042m-15.552 0a46.176 46.176 0 01-2.202.665M6.3 18a45.926 45.926 0 01-2.202.665m15.9 0a45.926 45.926 0 00-2.202-.665M21 18a45.926 45.926 0 00-2.202-.665" /></svg>
-                    Educação e Formação
+                    <span data-translate="education_title">Educação e Formação</span>
                 </h3>
                  <div class="space-y-8">
-                     <!-- Educação -->
                      <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
                         <a href="https://portal2.ipt.pt/pt/cursos/mestrados/mee-ecei/" target="_blank" class="block">
-                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500">Mestrado em Engenharia Eletrotécnica - Especialização em Controlo e Eletrónica Industrial</h4>
-                            <p class="text-md text-gray-700 dark:text-gray-300">Instituto Politécnico de Tomar</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">2019 - 2021 | Nota Final: 17/20</p>
+                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500" data-translate="edu1_title">Mestrado em Engenharia Eletrotécnica - Especialização em Controlo e Eletrónica Industrial</h4>
+                            <p class="text-md text-gray-700 dark:text-gray-300" data-translate="edu1_school">Instituto Politécnico de Tomar</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">2019 - 2021 | <span data-translate="final_grade">Nota Final</span>: 17/20</p>
                         </a>
                     </div>
                      <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
                          <a href="https://portal2.ipt.pt/pt/cursos/licenciaturas/leec/" target="_blank" class="block">
-                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500">Licenciatura em Engenharia Eletrotécnica e de Computadores</h4>
-                            <p class="text-md text-gray-700 dark:text-gray-300">Instituto Politécnico de Tomar</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">2016 - 2019 | Nota Final: 15/20</p>
+                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500" data-translate="edu2_title">Licenciatura em Engenharia Eletrotécnica e de Computadores</h4>
+                            <p class="text-md text-gray-700 dark:text-gray-300" data-translate="edu2_school">Instituto Politécnico de Tomar</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">2016 - 2019 | <span data-translate="final_grade">Nota Final</span>: 15/20</p>
                         </a>
                     </div>
                      <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
                         <a href="https://portal2.ipt.pt/pt/cursos/cets/cet-arci/" target="_blank" class="block">
-                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500">CET - Automação, Robótica e Controlo Industrial</h4>
-                            <p class="text-md text-gray-700 dark:text-gray-300">Instituto Politécnico de Tomar</p>
+                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500" data-translate="edu3_title">CET - Automação, Robótica e Controlo Industrial</h4>
+                            <p class="text-md text-gray-700 dark:text-gray-300" data-translate="edu3_school">Instituto Politécnico de Tomar</p>
                             <p class="text-sm text-gray-500 dark:text-gray-400">2014 - 2016</p>
                         </a>
                     </div>
                      <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
                          <a href="http://www.aevn.pt/" target="_blank" class="block">
-                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500">12º Ano em Ciências e Tecnologias</h4>
-                            <p class="text-md text-gray-700 dark:text-gray-300">Agrupamento de Escolas de Vendas Novas</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Concluído em 2014</p>
+                            <h4 class="text-lg font-bold dark:text-white hover:text-cyan-700 dark:hover:text-cyan-500" data-translate="edu4_title">12º Ano em Ciências e Tecnologias</h4>
+                            <p class="text-md text-gray-700 dark:text-gray-300" data-translate="edu4_school">Agrupamento de Escolas de Vendas Novas</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400" data-translate="edu4_date">Concluído em 2014</p>
                         </a>
                     </div>
-                    <!-- Formações Adicionais -->
                     <div class="bg-white p-6 rounded-xl shadow-md interactive-card">
-                        <h4 class="text-lg font-bold dark:text-white">Formações Adicionais</h4>
+                        <h4 class="text-lg font-bold dark:text-white" data-translate="edu5_title">Formações Adicionais</h4>
                         <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 dark:text-gray-400">
-                           <li>Procedimentos de Contratação Pública (40h)</li>
-                           <li>Microsoft Excel - Nível Avançado (50h)</li>
+                           <li data-translate="edu5_desc1">Procedimentos de Contratação Pública (40h)</li>
+                           <li data-translate="edu5_desc2">Microsoft Excel - Nível Avançado (50h)</li>
                         </ul>
                     </div>
                 </div>
@@ -304,27 +310,27 @@
             <section id="languages" class="fade-in-section bg-white p-8 rounded-xl shadow-md">
                 <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                     <svg class="w-8 h-8 mr-3 text-cyan-500 dark:text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
-                    Idiomas
+                    <span data-translate="languages_title">Idiomas</span>
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <div>
-                        <h4 class="font-bold text-lg text-gray-800 dark:text-gray-200">Português</h4>
-                        <p class="text-cyan-600 dark:text-cyan-400 font-semibold">Nativo</p>
+                        <h4 class="font-bold text-lg text-gray-800 dark:text-gray-200" data-translate="lang1_name">Português</h4>
+                        <p class="text-cyan-600 dark:text-cyan-400 font-semibold" data-translate="lang1_level">Nativo</p>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg text-gray-800 dark:text-gray-200">Inglês</h4>
-                        <p class="text-cyan-600 dark:text-cyan-400 font-semibold">Avançado / Proficiente (C1/C2)</p>
+                        <h4 class="font-bold text-lg text-gray-800 dark:text-gray-200" data-translate="lang2_name">Inglês</h4>
+                        <p class="text-cyan-600 dark:text-cyan-400 font-semibold" data-translate="lang2_level">Avançado / Proficiente (C1/C2)</p>
                          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                            <p>Compreensão: C1/C2</p>
-                            <p>Expressão Oral: B2</p>
+                            <p><span data-translate="lang_comprehension">Compreensão</span>: C1/C2</p>
+                            <p><span data-translate="lang_speaking">Expressão Oral</span>: B2</p>
                         </div>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg text-gray-800 dark:text-gray-200">Espanhol</h4>
-                        <p class="text-cyan-600 dark:text-cyan-400 font-semibold">Intermédio (B1/B2)</p>
+                        <h4 class="font-bold text-lg text-gray-800 dark:text-gray-200" data-translate="lang3_name">Espanhol</h4>
+                        <p class="text-cyan-600 dark:text-cyan-400 font-semibold" data-translate="lang3_level">Intermédio (B1/B2)</p>
                         <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                            <p>Compreensão: B1/B2</p>
-                            <p>Expressão Oral: A2</p>
+                            <p><span data-translate="lang_comprehension">Compreensão</span>: B1/B2</p>
+                            <p><span data-translate="lang_speaking">Expressão Oral</span>: A2</p>
                         </div>
                     </div>
                 </div>
@@ -332,14 +338,14 @@
 
             <!-- Secção Contacto -->
             <section id="contact" class="fade-in-section text-center py-16 bg-gray-700 dark:bg-gray-800 text-white rounded-xl">
-                <h3 class="text-3xl font-bold mb-4">Interessado em contactar?</h3>
-                <p class="text-gray-300 dark:text-gray-400 mb-6">Pode encontrar-me no LinkedIn, descarregar o meu CV ou enviar um email para:</p>
+                <h3 class="text-3xl font-bold mb-4" data-translate="contact_title">Interessado em contactar?</h3>
+                <p class="text-gray-300 dark:text-gray-400 mb-6" data-translate="contact_text">Pode encontrar-me no LinkedIn, descarregar o meu CV ou enviar um email para:</p>
                 <p class="text-2xl font-semibold text-white mb-8 hover:text-cyan-400 transition-colors">luispcfialho@gmail.com</p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="https://www.linkedin.com/in/luispcfialho/" target="_blank" class="inline-block bg-gray-600 hover:bg-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
                         LinkedIn
                     </a>
-                    <a href="https://drive.google.com/file/d/1t7l_rnWtH6b0dEhDX4wJlIpbV80LAm4l/view?usp=sharing" target="_blank" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                    <a href="https://drive.google.com/file/d/1t7l_rnWtH6b0dEhDX4wJlIpbV80LAm4l/view?usp=sharing" target="_blank" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105" data-translate="contact_cv">
                         Download CV
                     </a>
                 </div>
@@ -349,43 +355,293 @@
 
         <!-- Rodapé -->
         <footer class="text-center mt-12 text-gray-500 dark:text-gray-400 text-sm">
-            <p>&copy; 2025 Luís Pedro Coreixo Fialho. Todos os direitos reservados.</p>
+            <p data-translate="footer_text">&copy; 2025 Luís Pedro Coreixo Fialho. Todos os direitos reservados.</p>
         </footer>
     </div>
 
     <script>
-        // Lógica para o Dark Mode Toggle
+        // --- TRANSLATION LOGIC ---
+        const translations = {
+            pt: {
+                nav_about: "Sobre",
+                nav_experience: "Experiência",
+                nav_skills: "Competências",
+                nav_education: "Educação",
+                nav_languages: "Idiomas",
+                nav_contact: "Contacto",
+                header_subtitle: "Projetista Fotovoltaico | Especialista em Modelação 3D e Automação",
+                about_title: "Sobre Mim",
+                about_text: "Engenheiro Eletrotécnico com Mestrado e mais de 4 anos de experiência em ambientes industriais e de energias renováveis. Sólida especialização no ciclo completo de projetos solares fotovoltaicos, desde a conceção e custeio até à modelação 3D e implementação. Experiência comprovada em automação, desenho CAD e otimização de processos em empresas de referência como a PowerYield e a Volkswagen Autoeuropa. Proativo e com grande capacidade de aprendizagem, procuro novos desafios onde possa aplicar as minhas competências técnicas para desenvolver soluções inovadoras e eficientes.",
+                experience_title: "Experiência Profissional",
+                job1_title: "Projetista Solar Fotovoltaico",
+                job1_date: "Abril 2022 - Presente",
+                job1_desc1: "Gestão integral de projetos fotovoltaicos, liderando custeio, propostas, levantamentos e preparação de obra.",
+                job1_desc2: "Utilização de drones para levantamentos aéreos e fotogrametria.",
+                job1_desc3: "Desenvolvimento de modelos 2D e 3D detalhados para análise e simulação.",
+                job1_desc4: "Gestão da infraestrutura de redes e parque informático.",
+                job2_title: "Estágio em Modelação e Impressão 3D",
+                job2_date: "Palmela, Portugal | Novembro 2020 - Abril 2022",
+                job2_desc1: "Desenho e modelação de componentes e moldes de precisão em CATIA V5.",
+                job2_desc2: "Gestão do fluxo de trabalho de impressão 3D, da preparação à validação.",
+                job2_desc3: "Liderança no desenvolvimento de um dispositivo móvel para transporte de bases de medição.",
+                job2_desc4: "Administração de bases de dados em IBM Maximo e apoio em projetos de Realidade Virtual.",
+                job3_title: "Estágio em Programação e Eletrónica",
+                job3_date: "Évora, Portugal | Novembro 2015 - Fevereiro 2016",
+                job3_desc1: "Desenvolvimento de aplicação em LabView para visualização de dados de autómatos em tempo real.",
+                skills_title: "Competências Digitais",
+                skills_cat1: "Engenharia e Design",
+                skills_cat2: "Programação e Automação",
+                skill_plc: "Programação de Autómatos",
+                skill_scripting: "Criação de Scripts",
+                skill_automation: "Automatização Informática",
+                skills_cat3: "Software e Produtividade",
+                skills_cat4: "Tecnologias, Média e Outros",
+                skill_crypto: "Criptomoedas",
+                skill_vr: "Realidade Virtual",
+                skill_video: "Edição de Vídeo",
+                skill_image: "Edição de Imagem",
+                skill_security: "Sistemas de Segurança Informática",
+                skill_rc: "Veículos R/C",
+                skills_footer: "...e uma grande facilidade e gosto em aprender novos softwares e tecnologias!",
+                education_title: "Educação e Formação",
+                final_grade: "Nota Final",
+                edu1_title: "Mestrado em Engenharia Eletrotécnica - Especialização em Controlo e Eletrónica Industrial",
+                edu1_school: "Instituto Politécnico de Tomar",
+                edu2_title: "Licenciatura em Engenharia Eletrotécnica e de Computadores",
+                edu2_school: "Instituto Politécnico de Tomar",
+                edu3_title: "CET - Automação, Robótica e Controlo Industrial",
+                edu3_school: "Instituto Politécnico de Tomar",
+                edu4_title: "12º Ano em Ciências e Tecnologias",
+                edu4_school: "Agrupamento de Escolas de Vendas Novas",
+                edu4_date: "Concluído em 2014",
+                edu5_title: "Formações Adicionais",
+                edu5_desc1: "Procedimentos de Contratação Pública (40h)",
+                edu5_desc2: "Microsoft Excel - Nível Avançado (50h)",
+                languages_title: "Idiomas",
+                lang1_name: "Português",
+                lang1_level: "Nativo",
+                lang2_name: "Inglês",
+                lang2_level: "Avançado / Proficiente (C1/C2)",
+                lang3_name: "Espanhol",
+                lang3_level: "Intermédio (B1/B2)",
+                lang_comprehension: "Compreensão",
+                lang_speaking: "Expressão Oral",
+                contact_title: "Interessado em contactar?",
+                contact_text: "Pode encontrar-me no LinkedIn, descarregar o meu CV ou enviar um email para:",
+                contact_cv: "Download CV",
+                footer_text: "© 2025 Luís Pedro Coreixo Fialho. Todos os direitos reservados."
+            },
+            en: {
+                nav_about: "About",
+                nav_experience: "Experience",
+                nav_skills: "Skills",
+                nav_education: "Education",
+                nav_languages: "Languages",
+                nav_contact: "Contact",
+                header_subtitle: "Photovoltaic Designer | 3D Modeling & Automation Specialist",
+                about_title: "About Me",
+                about_text: "Electrical Engineer with a Master's degree and over 4 years of experience in industrial and renewable energy environments. Solid expertise in the complete lifecycle of solar photovoltaic projects, from design and costing to 3D modeling and implementation. Proven experience in automation, CAD design, and process optimization at leading companies like PowerYield and Volkswagen Autoeuropa. Proactive and a fast learner, I am seeking new challenges where I can apply my technical skills to develop innovative and efficient solutions.",
+                experience_title: "Professional Experience",
+                job1_title: "Photovoltaic Solar Designer",
+                job1_date: "April 2022 - Present",
+                job1_desc1: "Comprehensive management of photovoltaic projects, leading costing, proposals, technical surveys, and site preparation.",
+                job1_desc2: "Use of drones for aerial surveys and photogrammetry.",
+                job1_desc3: "Development of detailed 2D and 3D models for analysis and simulation.",
+                job1_desc4: "Management of network infrastructure and IT equipment.",
+                job2_title: "Internship in 3D Modeling and Printing",
+                job2_date: "Palmela, Portugal | November 2020 - April 2022",
+                job2_desc1: "CAD design and 3D modeling of precision components and molds in CATIA V5.",
+                job2_desc2: "Management of the 3D printing workflow, from preparation to validation.",
+                job2_desc3: "Leadership in the development of a mobile device for transporting measurement bases.",
+                job2_desc4: "Database administration in IBM Maximo and support for Virtual Reality projects.",
+                job3_title: "Internship in Programming and Electronics",
+                job3_date: "Évora, Portugal | November 2015 - February 2016",
+                job3_desc1: "Development of a LabView application for real-time visualization of data from production line PLCs.",
+                skills_title: "Digital Skills",
+                skills_cat1: "Engineering and Design",
+                skills_cat2: "Programming and Automation",
+                skill_plc: "PLC Programming",
+                skill_scripting: "Scripting",
+                skill_automation: "IT Automation",
+                skills_cat3: "Software and Productivity",
+                skills_cat4: "Technologies, Media, and Others",
+                skill_crypto: "Cryptocurrencies",
+                skill_vr: "Virtual Reality",
+                skill_video: "Video Editing",
+                skill_image: "Image Editing",
+                skill_security: "IT Security Systems",
+                skill_rc: "R/C Vehicles",
+                skills_footer: "...and a great ability and passion for learning new software and technologies!",
+                education_title: "Education and Training",
+                final_grade: "Final Grade",
+                edu1_title: "Master's in Electrical Engineering - Specialization in Control and Industrial Electronics",
+                edu1_school: "Polytechnic Institute of Tomar",
+                edu2_title: "Bachelor's in Electrical and Computer Engineering",
+                edu2_school: "Polytechnic Institute of Tomar",
+                edu3_title: "CET - Automation, Robotics, and Industrial Control",
+                edu3_school: "Polytechnic Institute of Tomar",
+                edu4_title: "12th Grade in Science and Technology",
+                edu4_school: "Vendas Novas School Group",
+                edu4_date: "Completed in 2014",
+                edu5_title: "Additional Training",
+                edu5_desc1: "Public Procurement Procedures (40h)",
+                edu5_desc2: "Microsoft Excel - Advanced Level (50h)",
+                languages_title: "Languages",
+                lang1_name: "Portuguese",
+                lang1_level: "Native",
+                lang2_name: "English",
+                lang2_level: "Advanced / Proficient (C1/C2)",
+                lang3_name: "Spanish",
+                lang3_level: "Intermediate (B1/B2)",
+                lang_comprehension: "Comprehension",
+                lang_speaking: "Speaking",
+                contact_title: "Interested in getting in touch?",
+                contact_text: "You can find me on LinkedIn, download my CV, or send an email to:",
+                contact_cv: "Download CV",
+                footer_text: "© 2025 Luís Pedro Coreixo Fialho. All rights reserved."
+            },
+            fr: {
+                nav_about: "À propos",
+                nav_experience: "Expérience",
+                nav_skills: "Compétences",
+                nav_education: "Formation",
+                nav_languages: "Langues",
+                nav_contact: "Contact",
+                header_subtitle: "Concepteur Photovoltaïque | Spécialiste en Modélisation 3D et Automatisation",
+                about_title: "À propos de moi",
+                about_text: "Ingénieur en électrotechnique avec un Master et plus de 4 ans d'expérience dans les environnements industriels et des énergies renouvelables. Solide spécialisation dans le cycle complet des projets solaires photovoltaïques, de la conception et du chiffrage à la modélisation 3D et à la mise en œuvre. Expérience avérée en automatisation, conception CAO et optimisation des processus dans des entreprises de premier plan comme PowerYield et Volkswagen Autoeuropa. Proactif et doté d'une grande capacité d'apprentissage, je recherche de nouveaux défis où je peux appliquer mes compétences techniques pour développer des solutions innovantes et efficaces.",
+                experience_title: "Expérience Professionnelle",
+                job1_title: "Concepteur Solaire Photovoltaïque",
+                job1_date: "Avril 2022 - Présent",
+                job1_desc1: "Gestion complète de projets photovoltaïques, y compris le chiffrage, les propositions, les relevés techniques et la préparation de chantier.",
+                job1_desc2: "Utilisation de drones pour les relevés aériens et la photogrammétrie.",
+                job1_desc3: "Développement de modèles 2D et 3D détaillés pour l'analyse et la simulation.",
+                job1_desc4: "Gestion de l'infrastructure réseau et du parc informatique.",
+                job2_title: "Stage en Modélisation et Impression 3D",
+                job2_date: "Palmela, Portugal | Novembre 2020 - Avril 2022",
+                job2_desc1: "Conception CAO et modélisation 3D de composants et de moules de précision sur CATIA V5.",
+                job2_desc2: "Gestion du flux de travail de l'impression 3D, de la préparation à la validation.",
+                job2_desc3: "Direction du développement d'un dispositif mobile pour le transport de bases de mesure.",
+                job2_desc4: "Administration de bases de données sur IBM Maximo et soutien aux projets de Réalité Virtuelle.",
+                job3_title: "Stage en Programmation et Électronique",
+                job3_date: "Évora, Portugal | Novembre 2015 - Février 2016",
+                job3_desc1: "Développement d'une application en LabView pour visualiser en temps réel les données des automates des lignes de production.",
+                skills_title: "Compétences Numériques",
+                skills_cat1: "Ingénierie et Conception",
+                skills_cat2: "Programmation et Automatisation",
+                skill_plc: "Programmation d'Automates",
+                skill_scripting: "Création de Scripts",
+                skill_automation: "Automatisation Informatique",
+                skills_cat3: "Logiciels et Productivité",
+                skills_cat4: "Technologies, Médias et Autres",
+                skill_crypto: "Cryptomonnaies",
+                skill_vr: "Réalité Virtuelle",
+                skill_video: "Montage Vidéo",
+                skill_image: "Retouche d'Image",
+                skill_security: "Systèmes de Sécurité Informatique",
+                skill_rc: "Véhicules R/C",
+                skills_footer: "...et une grande facilité et un grand intérêt pour l'apprentissage de nouveaux logiciels et technologies !",
+                education_title: "Formation et Éducation",
+                final_grade: "Note Finale",
+                edu1_title: "Master en Ingénierie Électrotechnique - Spécialisation en Contrôle et Électronique Industrielle",
+                edu1_school: "Institut Polytechnique de Tomar",
+                edu2_title: "Licence en Ingénierie Électrotechnique et Informatique",
+                edu2_school: "Institut Polytechnique de Tomar",
+                edu3_title: "CET - Automatisation, Robotique et Contrôle Industriel",
+                edu3_school: "Institut Polytechnique de Tomar",
+                edu4_title: "Baccalauréat en Sciences et Technologies",
+                edu4_school: "Groupe Scolaire de Vendas Novas",
+                edu4_date: "Terminé en 2014",
+                edu5_title: "Formations Complémentaires",
+                edu5_desc1: "Procédures de Marchés Publics (40h)",
+                edu5_desc2: "Microsoft Excel - Niveau Avancé (50h)",
+                languages_title: "Langues",
+                lang1_name: "Portugais",
+                lang1_level: "Natif",
+                lang2_name: "Anglais",
+                lang2_level: "Avancé / Compétent (C1/C2)",
+                lang3_name: "Espagnol",
+                lang3_level: "Intermédiaire (B1/B2)",
+                lang_comprehension: "Compréhension",
+                lang_speaking: "Expression Orale",
+                contact_title: "Intéressé(e) pour me contacter ?",
+                contact_text: "Vous pouvez me trouver sur LinkedIn, télécharger mon CV ou envoyer un email à :",
+                contact_cv: "Télécharger le CV",
+                footer_text: "© 2025 Luís Pedro Coreixo Fialho. Tous droits réservés."
+            }
+        };
+
+        const setLanguage = (lang) => {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update flag emoji
+            const emojiMap = { pt: '🇵🇹', en: '🇬🇧', fr: '🇫🇷' };
+            document.getElementById('current-lang-emoji').innerText = emojiMap[lang];
+        };
+
+        // --- DARK MODE LOGIC ---
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const languageToggleBtn = document.getElementById('language-toggle');
+        const languageMenu = document.getElementById('language-menu');
+        
+        // Function to toggle theme
+        const toggleTheme = () => {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+        };
 
-        // Verifica o tema guardado ou a preferência do sistema
+        // Initial theme setup
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
             themeToggleLightIcon.classList.remove('hidden');
         } else {
-            document.documentElement.classList.remove('dark');
             themeToggleDarkIcon.classList.remove('hidden');
         }
+        
+        // Theme toggle button event
+        themeToggleBtn.addEventListener('click', toggleTheme);
 
-        // Adiciona o evento de clique ao botão
-        themeToggleBtn.addEventListener('click', function() {
-            // Esconde/mostra os ícones
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
+        // --- LANGUAGE SWITCHER LOGIC ---
+        // Toggle language menu
+        languageToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            languageMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu if clicking outside
+        document.addEventListener('click', () => {
+             if (!languageMenu.classList.contains('hidden')) {
+                languageMenu.classList.add('hidden');
+             }
+        });
 
-            // Adiciona/remove a classe 'dark'
-            document.documentElement.classList.toggle('dark');
-            
-            // Guarda a preferência no localStorage
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.setItem('color-theme', 'dark');
-            } else {
-                localStorage.setItem('color-theme', 'light');
+        // Language selection event
+        languageMenu.addEventListener('click', (e) => {
+            const lang = e.target.closest('a').dataset.lang;
+            if (lang) {
+                setLanguage(lang);
+                languageMenu.classList.add('hidden');
             }
         });
 
-        // Lógica para a animação de scroll
+        // Initial language setup
+        const initialLang = localStorage.getItem('language') || 'pt';
+        setLanguage(initialLang);
+        
+        // --- SCROLL ANIMATION LOGIC ---
         const sections = document.querySelectorAll('.fade-in-section');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
