@@ -666,10 +666,18 @@
             });
             document.documentElement.lang = lang;
             localStorage.setItem('language', lang);
-            
+
             // Update flag emoji
             const emojiMap = { pt: '🇵🇹', en: '🇬🇧', es: '🇪🇸', fr: '🇫🇷' };
             document.getElementById('current-lang-emoji').innerText = emojiMap[lang];
+
+            // Re-type header subtitle and tagline with translated text
+            if (window._retypeHeader && translations[lang]) {
+                window._retypeHeader(
+                    translations[lang].header_subtitle || '',
+                    translations[lang].header_tagline || ''
+                );
+            }
         };
 
         // --- DARK MODE LOGIC ---
@@ -798,26 +806,52 @@ gl_FragColor=uLM>0.5?vec4(clamp(col.rgb*1.8,0.,1.),smoothstep(0.05,0.35,lum)):ve
     </script>
     <script>
     (function(){
+        function randSpeed(idx){var min=idx===0?5:3,max=idx===0?120:50;return Math.random()*(max-min)+min;}
+        var _typeTimer=null;
+
+        function typeText(el,cur,text,idx,cb){
+            el.textContent='';
+            cur.style.display='inline';
+            var i=0;
+            function next(){
+                if(_typeTimer)clearTimeout(_typeTimer);
+                if(i<text.length){el.textContent+=text[i];i++;_typeTimer=setTimeout(next,randSpeed(idx));}
+                else if(cb)cb();
+            }
+            next();
+        }
+
+        function typeLine(lines,idx){
+            if(idx>=lines.length)return;
+            var line=lines[idx],el=document.getElementById(line.el),cur=document.getElementById(line.cursor);
+            if(!el||!cur)return;
+            if(idx>0){var prev=document.getElementById(lines[idx-1].cursor);if(prev)prev.style.display='none';}
+            typeText(el,cur,line.text,idx,function(){
+                if(idx<lines.length-1)setTimeout(function(){typeLine(lines,idx+1);},400);
+            });
+        }
+
+        // Expose re-type function for language switching
+        window._retypeHeader=function(subtitle,tagline){
+            if(_typeTimer)clearTimeout(_typeTimer);
+            var subEl=document.getElementById('type-subtitle'),subCur=document.getElementById('cursor-subtitle');
+            var tagEl=document.getElementById('type-tagline'),tagCur=document.getElementById('cursor-tagline');
+            // Hide tagline cursor, show subtitle cursor
+            if(tagCur)tagCur.style.display='none';
+            typeText(subEl,subCur,subtitle,1,function(){
+                subCur.style.display='none';
+                typeText(tagEl,tagCur,tagline,2,null);
+            });
+        };
+
+        // Initial typing on page load
         setTimeout(function(){
             var lines=[
                 {el:'type-name',cursor:'cursor-name',text:'Luís Pedro Coreixo Fialho'},
                 {el:'type-subtitle',cursor:'cursor-subtitle',text:'Projetista Fotovoltaico | Especialista em Modelação 3D e Automação'},
                 {el:'type-tagline',cursor:'cursor-tagline',text:'Crio Soluções, Resolvo Problemas'}
             ];
-            function randSpeed(idx){var min=idx===0?5:3,max=idx===0?120:50;return Math.random()*(max-min)+min;}
-            function typeLine(idx){
-                if(idx>=lines.length)return;
-                var line=lines[idx],el=document.getElementById(line.el),cur=document.getElementById(line.cursor);
-                if(!el||!cur)return;
-                el.textContent='';
-                if(idx>0){var prev=document.getElementById(lines[idx-1].cursor);if(prev)prev.style.display='none';}
-                cur.style.display='inline';
-                var i=0;
-                function next(){if(i<line.text.length){el.textContent+=line.text[i];i++;setTimeout(next,randSpeed(idx));}
-                else if(idx<lines.length-1)setTimeout(function(){typeLine(idx+1);},400);}
-                next();
-            }
-            typeLine(0);
+            typeLine(lines,0);
         },300);
     })();
     </script>
