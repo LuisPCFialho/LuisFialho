@@ -147,9 +147,9 @@
         <!-- Secção do Cabeçalho -->
         <header class="text-center pt-16 pb-8">
             <img class="w-60 h-60 rounded-full mx-auto mb-4 border-4 border-white dark:border-gray-700 shadow-lg object-cover" src="https://i.imgur.com/bl2MXsB.jpeg" alt="Fotografia de Luís Fialho">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg"><span id="type-name"></span><span id="cursor-name" class="type-cursor">|</span></h1>
-            <h2 class="text-xl md:text-2xl font-medium text-cyan-300 mt-2 drop-shadow"><span id="type-subtitle"></span><span id="cursor-subtitle" class="type-cursor" style="display:none">|</span></h2>
-            <p class="text-lg italic text-gray-300 mt-4 drop-shadow"><span id="type-tagline"></span><span id="cursor-tagline" class="type-cursor" style="display:none">|</span></p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg" style="min-height:3rem"><span id="type-name"></span><span id="cursor-name" class="type-cursor">|</span></h1>
+            <h2 class="text-xl md:text-2xl font-medium text-cyan-300 mt-2 drop-shadow" style="min-height:1.75rem"><span id="type-subtitle"></span><span id="cursor-subtitle" class="type-cursor" style="display:none">|</span></h2>
+            <p class="text-lg italic text-gray-300 mt-4 drop-shadow" style="min-height:1.75rem"><span id="type-tagline"></span><span id="cursor-tagline" class="type-cursor" style="display:none">|</span></p>
             <style>.type-cursor{animation:blink .6s ease-in-out infinite;font-weight:300}@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}</style>
         </header>
 
@@ -836,7 +836,9 @@ gl_FragColor=uLM>0.5?vec4(clamp(col.rgb*1.8,0.,1.),smoothstep(0.05,0.35,lum)):ve
             if(_typeTimer)clearTimeout(_typeTimer);
             var subEl=document.getElementById('type-subtitle'),subCur=document.getElementById('cursor-subtitle');
             var tagEl=document.getElementById('type-tagline'),tagCur=document.getElementById('cursor-tagline');
-            // Hide tagline cursor, show subtitle cursor
+            // Clear both and hide cursors
+            subEl.textContent='';
+            tagEl.textContent='';
             if(tagCur)tagCur.style.display='none';
             typeText(subEl,subCur,subtitle,1,function(){
                 subCur.style.display='none';
