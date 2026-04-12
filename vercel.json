@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/euromilhoes",
+      "destination": "https://euromilhoes1.vercel.app"
+    },
+    {
+      "source": "/euromilhoes/",
+      "destination": "https://euromilhoes1.vercel.app/"
+    },
+    {
+      "source": "/euromilhoes/:path*",
+      "destination": "https://euromilhoes1.vercel.app/:path*"
+    },
+    {
       "source": "/claw",
       "destination": "https://moneyagent-dashboard.vercel.app/claw"
     },
