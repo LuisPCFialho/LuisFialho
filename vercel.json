@@ -1,9 +1,12 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/euromilhoes",
-      "destination": "https://euromilhoes1.vercel.app"
-    },
+      "destination": "/euromilhoes/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     {
       "source": "/euromilhoes/",
       "destination": "https://euromilhoes1.vercel.app/"
