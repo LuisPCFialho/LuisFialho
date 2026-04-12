@@ -9,11 +9,11 @@
   "rewrites": [
     {
       "source": "/euromilhoes/",
-      "destination": "https://euromilhoes1.vercel.app/"
+      "destination": "https://euromilhoes-luispcfialhos-projects.vercel.app/"
     },
     {
       "source": "/euromilhoes/:path*",
-      "destination": "https://euromilhoes1.vercel.app/:path*"
+      "destination": "https://euromilhoes-luispcfialhos-projects.vercel.app/:path*"
     },
     {
       "source": "/claw",
