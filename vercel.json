@@ -28,18 +28,6 @@
       "destination": "https://euromilhoes-luispcfialhos-projects.vercel.app/:path*"
     },
     {
-      "source": "/claw",
-      "destination": "https://moneyagent-dashboard.vercel.app/claw"
-    },
-    {
-      "source": "/claw/",
-      "destination": "https://moneyagent-dashboard.vercel.app/claw/"
-    },
-    {
-      "source": "/claw/:path*",
-      "destination": "https://moneyagent-dashboard.vercel.app/claw/:path*"
-    },
-    {
       "source": "/ebook",
       "destination": "https://kilo-ebook.vercel.app/ebook"
     },
