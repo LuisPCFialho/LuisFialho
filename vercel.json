@@ -13,16 +13,6 @@
       "permanent": true
     },
     {
-      "source": "/ebook",
-      "destination": "https://ebook.luisfialho.com",
-      "permanent": true
-    },
-    {
-      "source": "/ebook/:path*",
-      "destination": "https://ebook.luisfialho.com/:path*",
-      "permanent": true
-    },
-    {
       "source": "/euromilhoes",
       "destination": "/euromilhoes/",
       "permanent": false
@@ -48,6 +38,30 @@
     {
       "source": "/claw/:path*",
       "destination": "https://moneyagent-dashboard.vercel.app/claw/:path*"
+    },
+    {
+      "source": "/ebook",
+      "destination": "https://kilo-ebook.vercel.app/ebook"
+    },
+    {
+      "source": "/ebook/",
+      "destination": "https://kilo-ebook.vercel.app/ebook/"
+    },
+    {
+      "source": "/ebook/:path*",
+      "destination": "https://kilo-ebook.vercel.app/ebook/:path*"
+    },
+    {
+      "source": "/carlife",
+      "destination": "https://carlife-web.vercel.app/carlife"
+    },
+    {
+      "source": "/carlife/",
+      "destination": "https://carlife-web.vercel.app/carlife/"
+    },
+    {
+      "source": "/carlife/:path*",
+      "destination": "https://carlife-web.vercel.app/carlife/:path*"
     }
   ]
 }
