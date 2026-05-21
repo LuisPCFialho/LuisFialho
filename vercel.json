@@ -1,6 +1,28 @@
 {
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "luisfialho.pt" }],
+      "destination": "https://luisfialho.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.luisfialho.pt" }],
+      "destination": "https://luisfialho.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ebook",
+      "destination": "https://ebook.luisfialho.com",
+      "permanent": true
+    },
+    {
+      "source": "/ebook/:path*",
+      "destination": "https://ebook.luisfialho.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/euromilhoes",
       "destination": "/euromilhoes/",
       "permanent": false
