@@ -19,6 +19,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/estatisticas/script.js", "destination": "https://analytics.openviewiptv.com/matomo.js" },
+    { "source": "/estatisticas/registo", "destination": "https://analytics.openviewiptv.com/matomo.php" },
     {
       "source": "/euromilhoes/",
       "destination": "https://euromilhoes-luispcfialhos-projects.vercel.app/"
