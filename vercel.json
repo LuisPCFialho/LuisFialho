@@ -1,6 +1,12 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.luisfialho.com" }],
+      "destination": "https://luisfialho.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.luisfialho.com" }],
       "destination": "https://luisfialho.com/:path*",
