@@ -1,0 +1,6 @@
+# Fontes do build do CSS (o resultado, assets/tailwind.css, e publicado)
+package.json
+package-lock.json
+node_modules
+tailwind.config.js
+src

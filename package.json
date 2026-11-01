@@ -1,0 +1,8 @@
+{
+  "name": "luisfialho-site",
+  "private": true,
+  "description": "Site estatico. Apos alterar classes Tailwind em index.html ou assets/js, recompilar o CSS com: npm run build:css",
+  "scripts": {
+    "build:css": "npx --yes tailwindcss@3.4.17 -c tailwind.config.js -i src/tailwind.css -o assets/tailwind.css --minify"
+  }
+}
