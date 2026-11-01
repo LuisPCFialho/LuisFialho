@@ -1,0 +1,17 @@
+# Luís Fialho
+
+> Site profissional de Luís Pedro Coreixo Fialho, Engenheiro Eletrotécnico (Mestrado, Instituto Politécnico de Tomar), projetista solar fotovoltaico e modelador 3D em Portugal.
+
+- Função atual: Projetista Solar Fotovoltaico na PowerYield (Montemor-o-Novo), desde abril de 2022: gestão de projetos fotovoltaicos (custeio, propostas, levantamentos e preparação de obra), levantamentos com drone e fotogrametria, modelos 2D e 3D para análise e simulação.
+- Experiência anterior: estágio em modelação e impressão 3D na Volkswagen Autoeuropa (Palmela, 2020-2022, CATIA V5); estágio em programação e eletrónica na TE Connectivity (Évora, 2015-2016, LabView).
+- Ferramentas: PVsyst, PV*SOL, AutoCAD, Recap Pro, SketchUp, CATIA V5, SolidWorks, Fusion 360, WebODM, DJI Terra, VBA.
+- Idiomas: português (nativo), inglês (C1/C2), espanhol (B1/B2).
+
+## Páginas
+
+- [Página principal](https://luisfialho.com/): percurso, experiência, competências, formação e contacto.
+
+## Contacto
+
+- Email: luispcfialho@gmail.com
+- LinkedIn: https://www.linkedin.com/in/luispcfialho/

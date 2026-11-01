@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /estatisticas/
+
+Sitemap: https://luisfialho.com/sitemap.xml

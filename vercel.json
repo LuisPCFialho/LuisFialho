@@ -2,6 +2,12 @@
   "redirects": [
     {
       "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.luisfialho.com" }],
+      "destination": "https://luisfialho.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "luisfialho.pt" }],
       "destination": "https://luisfialho.com/:path*",
       "permanent": true
@@ -52,6 +58,23 @@
     {
       "source": "/carlife/:path*",
       "destination": "https://carlife-web.vercel.app/carlife/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/((?!ebook|carlife|euromilhoes|estatisticas).*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
     }
   ]
 }
